@@ -19,7 +19,7 @@ jobs:
 
       - name: Determine Event Type
         run: |
-          echo "Triggered by GitHub Event: ${{ github.event_name }}"
+          echo "Triggered by GitHub Event: ${{ github.event_name }} - Action: ${{ github.event.action }}"
 
       - name: Print GitHub Event Payload
         run: |
