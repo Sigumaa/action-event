@@ -1,0 +1,23 @@
+name: Debug GitHub Event Payload
+
+on:
+  issues:
+    types:
+      - opened
+      - closed
+      - reopened
+      - assigned
+      - unassigned
+
+jobs:
+  debug-github-event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print GitHub Event Payload
+        run: |
+          echo "GitHub Event Payload:"
+          echo '${{ toJSON(github.event) }}'
