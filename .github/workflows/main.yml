@@ -32,7 +32,7 @@ jobs:
           echo "Event payload saved to github_event_payload.json"
 
       - name: Upload GitHub Event Payload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: github-event-payload
           path: github_event_payload.json
